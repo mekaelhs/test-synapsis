@@ -32,7 +32,6 @@ export default function Home({ tasks = [] }) {
                   <a>{task.title}</a>
                 </Link>
               </Card.Header>
-              <p>Description: {task.description}</p>
               <Card.Description>
               <p>First Name: {task.firstName}</p>
               <p>Last Name: {task.lastName}</p>
@@ -42,6 +41,7 @@ export default function Home({ tasks = [] }) {
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
+              <p>Description: {task.description}</p>
               {/* <p>Created At: {task.createdAt}</p>
               <p>Updated At: {task.updatedAt}</p> */}
               <Button 

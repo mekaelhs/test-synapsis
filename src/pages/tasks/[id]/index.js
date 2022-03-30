@@ -47,7 +47,16 @@ const Task = ( {task, error}) => {
                 <Card.Header>{task.title}</Card.Header>
                 <Card.Description>
                   {task.description}
+                  {<br/>}
                   {task.email}
+                  {<br/>}
+                  {task.firstName}
+                  {<br/>}
+                  {task.lastName}
+                  {<br/>}
+                  {task.phone}
+                  {<br/>}
+                  {task.address}
                 </Card.Description>
               </Card.Content>
               <Card.Content extra>

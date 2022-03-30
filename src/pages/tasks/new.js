@@ -39,10 +39,10 @@ const CreateTask = () => {
   const validate = () => {
     let errors = {};
     if (!title) {
-      errors.title = "title is Required"
+      errors.title = "Title is Required"
     }
     if (!description) {
-      errors.description = "description is Required"
+      errors.description = "Description is Required"
     }
     if (!email) {
       errors.email = "Email is Required"
@@ -88,6 +88,7 @@ const CreateTask = () => {
     } catch (error) {
       console.log(error);
     }
+    console.log(newTask);
   }
 
   const createTask = async () => {
@@ -102,6 +103,7 @@ const CreateTask = () => {
     } catch (error) {
       console.log(error);
     }
+    console.log(newTask);
   }
 
   const handleChange = (e) => {
@@ -134,17 +136,6 @@ const CreateTask = () => {
                     value={title}
                     autoFocus
                   />
-                  <Form.Input 
-                    error={
-                      errors.email ? {content : "Please enter an email" } : null
-                    }
-                    label="Email" 
-                    placeholder="Enter email" 
-                    name="email" 
-                    onChange={handleChange}
-                    value={email}
-                    autoFocus
-                  />
                     <Form.Input
                       error={
                         errors.firstName ? {content : "Please enter a first name" } : null
@@ -165,6 +156,17 @@ const CreateTask = () => {
                       name="lastName" 
                       onChange={handleChange}
                       value={lastName}
+                      autoFocus
+                    />
+                    <Form.Input 
+                      error={
+                        errors.email ? {content : "Please enter an email" } : null
+                      }
+                      label="Email" 
+                      placeholder="Enter email" 
+                      name="email" 
+                      onChange={handleChange}
+                      value={email}
                       autoFocus
                     />
                   <Form.Input 
