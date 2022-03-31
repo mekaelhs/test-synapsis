@@ -43,9 +43,11 @@ const Task = ( {task, error}) => {
         <Grid.Row>
           <Grid.Column textAlign="center">
             <Card centered>
-              <Card.Content>
+              <Card.Content >
                 <Card.Header>{task.title}</Card.Header>
                 <Card.Description>
+                  {task._id.slice(task._id.length - 5)}
+                  {<br/>}
                   {task.description}
                   {<br/>}
                   {task.email}

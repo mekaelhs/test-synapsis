@@ -1,4 +1,4 @@
-import { Button, Card, Container, Grid } from "semantic-ui-react";
+import { Button, Card, Container, Feed, Grid } from "semantic-ui-react";
 import Link from "next/link";
 import {useRouter} from "next/router";
 
@@ -36,12 +36,13 @@ export default function Home({ tasks = [] }) {
               <p>First Name: {task.firstName}</p>
               <p>Last Name: {task.lastName}</p>
               <p>Email: {task.email}</p>
-              <p>Phone: {task.phone}</p>
+              <p>Phone: +62-{task.phone}</p>
               <p>Address: {task.address}</p>
               </Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <p>Description: {task.description}</p>
+              <p style={{fontWeight: "1200"}}>ID: {task._id.slice(task._id.length - 5)}</p>
+              <p style={{fontWeight: "1200"}}>Data Created: {task.createdAt.slice(0, 10)}</p>
               {/* <p>Created At: {task.createdAt}</p>
               <p>Updated At: {task.updatedAt}</p> */}
               <Button 

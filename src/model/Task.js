@@ -12,7 +12,7 @@ const TaskSchema = new Schema({
     type: String,
     required: [true, "Description is required"],
     trim: true,
-    maxlength: [20, "description cannot be greater than 20 character"]
+    // maxlength: [20, "description cannot be greater than 20 character"]
   },
   firstName: {
     type: String,
@@ -30,7 +30,7 @@ const TaskSchema = new Schema({
     type: String,
     required: [true, "Email is required"],
     trim: true,
-    maxlength: [20, "email cannot be greater than 20 character"]
+    // maxlength: [20, "email cannot be greater than 20 character"]
   },
   phone: {
     type: Number,

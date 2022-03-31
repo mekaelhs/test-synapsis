@@ -134,6 +134,8 @@ const CreateTask = () => {
                     name="title" 
                     onChange={handleChange}
                     value={title}
+                    maxLength="10"
+                    minLength="1"
                     autoFocus
                   />
                     <Form.Input
@@ -145,6 +147,8 @@ const CreateTask = () => {
                       name="firstName" 
                       onChange={handleChange}
                       value={firstName}
+                      maxLength="10"
+                      minLength="1"
                       autoFocus
                     />
                     <Form.Input
@@ -156,6 +160,8 @@ const CreateTask = () => {
                       name="lastName" 
                       onChange={handleChange}
                       value={lastName}
+                      maxLength="10"
+                      minLength="1"
                       autoFocus
                     />
                     <Form.Input 
@@ -178,6 +184,8 @@ const CreateTask = () => {
                     name="phone" 
                     onChange={handleChange}
                     value={phone}
+                    maxLength="15"
+                    minLength="7"
                     autoFocus
                   />
                   <Form.TextArea 
