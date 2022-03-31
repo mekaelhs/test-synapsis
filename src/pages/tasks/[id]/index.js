@@ -48,8 +48,6 @@ const Task = ( {task, error}) => {
                 <Card.Description>
                   {task._id.slice(task._id.length - 5)}
                   {<br/>}
-                  {task.description}
-                  {<br/>}
                   {task.email}
                   {<br/>}
                   {task.firstName}

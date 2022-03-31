@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const CreateTask = () => {
   const [newTask, setNewTask] = useState({
     title: "",
-    description: "",
+    // description: "",
     firstName: "",
     lastName: "",
     email: "",
@@ -23,7 +23,7 @@ const CreateTask = () => {
     const data = await response.json();
     setNewTask({ 
       title: data.title, 
-      description: data.description, 
+      // description: data.description, 
       email: data.email, 
       firstName: data.firstName,
       lastName: data.lastName,
@@ -41,9 +41,9 @@ const CreateTask = () => {
     if (!title) {
       errors.title = "Title is Required"
     }
-    if (!description) {
-      errors.description = "Description is Required"
-    }
+    // if (!description) {
+    //   errors.description = "Description is Required"
+    // }
     if (!email) {
       errors.email = "Email is Required"
     }
@@ -199,7 +199,7 @@ const CreateTask = () => {
                     value={address}
                     autoFocus
                   />
-                  <Form.TextArea 
+                  {/* <Form.TextArea 
                     error={
                       errors.description ? {content : "Please enter description" } : null
                     }
@@ -209,7 +209,7 @@ const CreateTask = () => {
                     onChange={handleChange}
                     value={description}
                     autoFocus
-                  />
+                  /> */}
                   <Button type="submit" primary>
                     {query.id ? "Update" : "Submit"}
                   </Button>
